@@ -27,7 +27,7 @@ public enum TagType {
 	 */
 	static {
 		// create map builder
-		ImmutableMap.Builder<Byte, TagType> mapBuilder = new ImmutableMap.Builder<Byte, TagType> ();
+		ImmutableMap.Builder<Byte, TagType> mapBuilder = new ImmutableMap.Builder<> ();
 
 		// add all types
 		for (TagType type : values ()) {

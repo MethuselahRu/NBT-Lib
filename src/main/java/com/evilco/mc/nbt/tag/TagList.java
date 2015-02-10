@@ -27,7 +27,7 @@ public class TagList extends AbstractTag implements IAnonymousTagContainer {
 	 */
 	public TagList (@Nonnull String name) {
 		super (name);
-		this.tagList = new ArrayList<ITag> ();
+		this.tagList = new ArrayList<> ();
 	}
 
 	/**
@@ -55,7 +55,7 @@ public class TagList extends AbstractTag implements IAnonymousTagContainer {
 		super (inputStream, anonymous);
 
 		// create tagList
-		this.tagList = new ArrayList<ITag> ();
+		this.tagList = new ArrayList<> ();
 
 		// get type ID
 		byte type = inputStream.readByte ();
@@ -96,7 +96,7 @@ public class TagList extends AbstractTag implements IAnonymousTagContainer {
 	 */
 	@SuppressWarnings("unchecked")
 	public <T extends ITag> List<T> getTags(Class<T> tagClass) throws UnexpectedTagTypeException {
-		ImmutableList.Builder<T> builder = new ImmutableList.Builder<T>();
+		ImmutableList.Builder<T> builder = new ImmutableList.Builder<>();
 		for (ITag tag : tagList) {
 			if (!tagClass.isInstance(tag))
 				throw new UnexpectedTagTypeException(
@@ -106,7 +106,7 @@ public class TagList extends AbstractTag implements IAnonymousTagContainer {
 								+ tag.getClass().getSimpleName());
 			builder.add((T) tag);
 		}
-		return builder.build ();
+		return builder.build();
 	}
 
 	/**
