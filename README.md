@@ -1,5 +1,5 @@
-Java NBT Library [![Build Status](http://assets.evil-co.com/build/NBTLIB-MASTER.png)](http://www.evil-co.com/ci/browse/NBTLIB-MASTER)
-===============
+Java NBT Library
+================
 The NBT Java library provides a simple read and write API for Minecraft NBT files and streams.
 
 Examples
@@ -43,7 +43,7 @@ to your project:
 	<dependency>
 		<groupId>com.evilco.mc</groupId>
 		<artifactId>nbt</artifactId>
-		<version>1.0.2</version>
+		<version>1.1-SNAPSHOT</version>
 	</dependency>
 
 	<!- ... -->
